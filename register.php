@@ -18,10 +18,10 @@ if (isset($_POST['register'])) {
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            $insert_query = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
+            $insert_query = "INSERT INTO users (username, password, role) VALUES ('$username', '$hashed_password', 'buyer')";
+            
             if (mysqli_query($connection, $insert_query)) {
-                $_SESSION['username'] = $username;
-                header("Location: index.php");
+                header("Location: index.php?message=Registration successful! Please log in.");
                 exit();
             } else {
                 $message = "Registration failed. Please try again.";

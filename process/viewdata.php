@@ -1,5 +1,10 @@
 <?php
+session_start();
 include('../dbcon.php');
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] === 'buyer') {
+    die("Access Denied.");
+}
 
 if (isset($_GET['id']) && isset($_POST['update_image'])) {
     $id = $_GET['id'];

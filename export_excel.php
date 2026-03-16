@@ -1,5 +1,10 @@
 <?php
+session_start();
 include('dbcon.php');
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'owner') {
+    die("Access Denied: You do not have permission to export this data.");
+}
 
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=FishData.xls");

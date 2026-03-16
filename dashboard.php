@@ -2,8 +2,9 @@
 session_start();
 include('dbcon.php');
 
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+// PROTECTION: Redirect anyone who isn't the Owner
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'owner') {
+    header("Location: main.php");
     exit();
 }
 
@@ -30,7 +31,7 @@ if (!$result) {
     <h1 class="home_name">Menard's Acquatics</h1>
     
     <div class="top_div">
-        <h2>Dashboard</h2>
+        <h2>Dashboard (Owner Access Only)</h2>
         <a href="main.php"><button style="margin-right: 10px;">Back</button></a>
         <button id="exportPDF">Export All Data</button>
         <a href="logout.php"><button style="margin-right: 10px;">Logout</button></a>

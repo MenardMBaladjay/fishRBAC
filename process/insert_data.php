@@ -1,5 +1,11 @@
 <?php
+session_start();
 include '../dbcon.php';
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] === 'buyer') {
+    die("Access Denied.");
+}
+
 if(isset($_POST['add_data'])){
 
     $fish_type = $_POST['fishtype'];
