@@ -2,7 +2,6 @@
 session_start();
 include('dbcon.php');
 
-// PROTECTION: Redirect anyone who isn't the Owner
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'owner') {
     header("Location: main.php");
     exit();
