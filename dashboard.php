@@ -30,7 +30,7 @@ if (!$result) {
     <h1 class="home_name">Menard's Acquatics</h1>
     
     <div class="top_div">
-        <h2>Dashboard (Owner Access Only)</h2>
+        <h2>Income Dashboard</h2>
         <a href="main.php"><button style="margin-right: 10px;">Back</button></a>
         <button id="exportPDF">Export All Data</button>
         <a href="logout.php"><button style="margin-right: 10px;">Logout</button></a>

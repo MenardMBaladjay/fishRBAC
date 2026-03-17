@@ -21,19 +21,19 @@ $role = $_SESSION['role'];
 
     <h1 class="home_name">Menard's Acquatics</h1>
     <div class="top_div">
-        <h2>Registered Fish (Role: <?php echo ucfirst($role); ?>)</h2>
+        <h2 style="margin-left: 10px;">Registered Fish | Role: <?php echo ucfirst($role); ?></h2>
         
         <?php if ($role === 'caretaker' || $role === 'owner'): ?>
             <button onclick="effect()">Add new</button>
         <?php endif; ?>
 
         <?php if ($role === 'owner'): ?>
-            <a href="dashboard.php"><button style="margin-right: 20px;">Dashboard</button></a>
+            <a href="dashboard.php"><button style="margin-right: 20px;">Income</button></a>
             <a href="export_excel.php"><button>Export All Data</button></a>
-            <a href="manage_users.php"><button style="background-color: #ff4d4d;">Manage Users</button></a>
+            <a href="manage_users.php"><button style="background-color: #dbf10d;">Manage Users</button></a>
         <?php endif; ?>
 
-        <a href="logout.php"><button style="background-color: gray;">Logout</button></a>
+        <a href="logout.php"><button style="background-color: #ff4d4d;">Logout</button></a>
     </div>
 
     <div class="blur_effect" id="blur"></div>

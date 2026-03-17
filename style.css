@@ -8,11 +8,8 @@
 body{
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 255, 255, 0.1);
-    background-image: url(fishbg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: rgba(0, 255, 255, 0.3);
+    
     min-height: 100vh;
     
 }
@@ -20,7 +17,7 @@ body{
     display: flex;
     width: 100%;
     min-height: 100px;
-    background-color: rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 255, 255, 0.7);
     justify-content: center;
     align-items: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -32,7 +29,7 @@ table{
     margin: 20px auto;
     border-spacing: 10px; 
     box-shadow: 0 4px 8px rgba(0,0,0,1);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 th, td{
     padding: 10px;
@@ -45,12 +42,12 @@ th{
     font-size: 30px;
     }
 td{
-    background-image: url(fishbg.jpg);
+    background-color: rgba(255, 255, 255, 0.2);
     font-size: 20px;
     font-weight: bold;
 }                                                   
 .top_div{
-    margin: 20px auto 50px auto;
+    margin: 30px auto 50px auto;
     width: 80%;
     min-height: 10px;
 }

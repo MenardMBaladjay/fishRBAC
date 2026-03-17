@@ -39,7 +39,7 @@ if (isset($_POST['delete_user'])) {
     
     <div class="mainwrapper_div">
         <div style="margin-bottom: 20px;">
-            <a href="main.php"><button class="button1">Back to Main</button></a>
+            <a href="main.php"><button class="button1" style="width: 150px; font-size: 16px; margin-left: 40px; margin-top: 30px;">Back to Main</button></a>
         </div>
 
         <?php if(isset($_GET['message'])) echo "<h6>".$_GET['message']."</h6>"; ?>
